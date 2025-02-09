@@ -13,8 +13,8 @@
 // @compatible  firefox
 // @contributionURL bitcoin:37xGgYLeQoaJsCdrCjVW89m5oWZxp8tkhf
 // @basecodeversion 26
-// @downloadURLX https://update.greasyfork.org/scripts/29140/Steamgifts%20Auto%20Entry%20Enhanced.user.js
-// @updateURLX https://update.greasyfork.org/scripts/29140/Steamgifts%20Auto%20Entry%20Enhanced.meta.js
+// @downloadURL https://raw.githubusercontent.com/zelda0079/Steamgifts-Auto-Entry-Enhanced-EDITED-/refs/heads/main/script.js
+// @updateURL https://raw.githubusercontent.com/zelda0079/Steamgifts-Auto-Entry-Enhanced-EDITED-/refs/heads/main/script.js
 // ==/UserScript==
 
 
