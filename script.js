@@ -12,6 +12,7 @@
 // @require     http://code.jquery.com/ui/1.11.4/jquery-ui.min.js
 // @compatible  firefox
 // @basecodeversion 26
+// @installURL https://github.com/zelda0079/Steamgifts-Auto-Entry-Enhanced-EDITED-/raw/main/script.js
 // @downloadURL https://github.com/zelda0079/Steamgifts-Auto-Entry-Enhanced-EDITED-/raw/main/script.js
 // @updateURL https://github.com/zelda0079/Steamgifts-Auto-Entry-Enhanced-EDITED-/raw/main/script.js
 // ==/UserScript==
