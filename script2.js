@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name        Steamgifts Auto Entry Enhanced EDIT
-// @namespace   Steamgifts Auto Entry Enhanced
+// @name        Steamgifts.Auto.Entry.Enhanced.EDIT
+// @namespace   Steamgifts.Auto.Entry.Enhanced.EDIT
 // @description Automatically enters giveaways on steamgifts.com
 // @author      PutinTheGreat (EDITED BY ZELDA)
 // @include     http*://*steamgifts.com*
@@ -16,7 +16,6 @@
 // @downloadURL https://github.com/zelda0079/Steamgifts-Auto-Entry-Enhanced-EDITED-/raw/main/script2.js
 // @updateURL https://github.com/zelda0079/Steamgifts-Auto-Entry-Enhanced-EDITED-/raw/main/script2.js
 // ==/UserScript==
-
 
 
 this.$ = this.jQuery = jQuery.noConflict(true);
