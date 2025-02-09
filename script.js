@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name        Steamgifts Auto Entry Enhanced
+// @name        Steamgifts Auto Entry Enhanced EDIT
 // @namespace   Steamgifts Auto Entry Enhanced
 // @description Automatically enters giveaways on steamgifts.com
-// @author      PutinTheGreat
+// @author      PutinTheGreat (EDIT BY ZELDA)
 // @include     http*://*steamgifts.com*
 // @version     10.0.2
 // @homepage    https://github.com/PutinTheGreat/Steamgifts_AutoEntry_Enhanced
@@ -13,8 +13,8 @@
 // @compatible  firefox
 // @contributionURL bitcoin:37xGgYLeQoaJsCdrCjVW89m5oWZxp8tkhf
 // @basecodeversion 26
-// @downloadURL https://update.greasyfork.org/scripts/29140/Steamgifts%20Auto%20Entry%20Enhanced.user.js
-// @updateURL https://update.greasyfork.org/scripts/29140/Steamgifts%20Auto%20Entry%20Enhanced.meta.js
+// @downloadURLX https://update.greasyfork.org/scripts/29140/Steamgifts%20Auto%20Entry%20Enhanced.user.js
+// @updateURLX https://update.greasyfork.org/scripts/29140/Steamgifts%20Auto%20Entry%20Enhanced.meta.js
 // ==/UserScript==
 
 
@@ -50,11 +50,12 @@ var siteurl=sitepattern.exec(document.URL.toString());
 var pointsavailable=0;
 var possibleentries=[];
 var bestchanceentries=[];
-var timeout=600000;
+var timeout=1200000;
 var enabled=false;
 var enabledonload=false; //default --- var enabledonload=false;
 var maxentries=-1; //default --- var maxentries='';
-var maxpagenum=8; //default --- var maxpagenum=10;
+var pagenum=1;
+var maxpagenum=10; //default --- var maxpagenum=10;
 var minpointpageincr=220; //default --- var minpointpageincr=220;
 var enterfree=true; //default --- var enterfree=true;
 var previousentrylistcount=0; //for checking if there are giveaways this is workaround for issue
@@ -64,7 +65,7 @@ var entrylisterrorcount=0; //for tracking if there are issues with entrylistcoun
 var accountsynctime=0;
 var accountsynctimeupdated=false;
 var ownedgameslist=[];
-var time_interval = 500;
+var time_interval = 3000;
 var time_min = 0;
 var timer;
 var timerRunning = false;
@@ -97,7 +98,7 @@ function stopTimer() {
 }
 
 function processTimer() {
-  fn_elementsensorheight();
+  //fn_elementsensorheight();
   fn_process_time();
   timer = setTimeout(processTimer, time_interval);
 }
@@ -225,7 +226,7 @@ function backgroundpageload_getownedgameslist(pagenum) {
   return function(resp) {
 
     ownedgamesnames=$(resp).find('.table__column__heading');
-    pagelimit=$(resp).find('.pagination__navigation > :last-child').attr('data-page-number');
+    pagelimit=maxpagenum
 
     if(typeof(ownedgamesnames)!="undefined" && typeof(ownedgamesnames.length)!="undefined") {
       if(pagenum==1) {
@@ -556,7 +557,7 @@ function backgroundpageload(pagenum) {
     for(var ei=0; ei<possibleentries.length; ei++) {
       afterenterpointcount-=possibleentries[ei].points;
     }
-    if((pagenum<maxpagenum || afterenterpointcount>minpointpageincr) && nogiveaways==false) {
+    if((pagenum<10 || afterenterpointcount>minpointpageincr) && nogiveaways==false) {
       previousentrylistcount=entries.length;
       startpagerequest(pagenum+1);
       return;
@@ -597,7 +598,7 @@ function loadfailure(pagenum) {
       pagenum=0;
     }
     
-    if(pagenum<maxpagenum) {
+    if(pagenum<10) {
       startpagerequest(pagenum+1);
       return;
     }
