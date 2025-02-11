@@ -599,7 +599,7 @@ function loadfailure(pagenum) {
       pagenum=0;
     }
 
-    if(pagenum<10) {
+    if(pagenum<maxpagenum) {
       startpagerequest(pagenum+1);
       return;
     }
